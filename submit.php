@@ -10,7 +10,7 @@ require_once 'vendor/autoload.php';
 
 // POSTリクエストからパラメータを取得
 $markdown = $_POST['editorContent'] ;
-$format = $_POST['format']??"html" ;
+// $format = $_POST['format']??"html" ;
 
 // echo($markdown);
 // echo($format);
@@ -24,15 +24,15 @@ $parsedown = new Parsedown();
 $html = $parsedown->text($markdown);
 
 // 変換された HTML を表示
-if($format==="file"){
+// if($format==="file"){
     header('Content-Type: text/html');
     header('Content-Disposition: attachment; filename="markdownToHtml.html"');
     echo $html;
-}else{
+// }else{
     
     
-    echo $html;
+//     echo $html;
 
-}
+// }
 
 ?>
