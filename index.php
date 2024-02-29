@@ -28,7 +28,7 @@
     require(['vs/editor/editor.main'], function() {
         var editor = monaco.editor.create(document.getElementById('editor'), {
             value: '',
-            language: 'javascript'
+            language: 'markdown'
         });
 
         editor.onDidChangeModelContent(function () {
